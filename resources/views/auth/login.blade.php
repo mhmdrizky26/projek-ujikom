@@ -6,7 +6,7 @@
         <img src="img/logo.png" class="img-fluid" width="50px" alt="">
         </div>
         <div class="col-lg-8 text-end my-auto fw-semibold">
-            <p>Belum mempunyai akun?<a href="" class="text-decoration-none"> Daftar</a></p>
+            <p>Belum mempunyai akun?<a href="{{ route('register') }}" class="text-decoration-none"> Daftar</a></p>
         </div>
     </div>
     <div class="card-body">
