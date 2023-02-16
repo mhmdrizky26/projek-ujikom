@@ -9,7 +9,7 @@
         <form action="" method="post">
             <div class="mb-3">
                 <div id="laporan" class="">Isi Laporan</div>
-                <textarea class="form-control" id="laporan" rows="5" disabled>Terjadi perampokan di pasar cicaheum</textarea>
+                <textarea class="form-control" id="laporan" rows="10" disabled>Terjadi perampokan di pasar cicaheum</textarea>
               </div>
               <div class="row">
               <div class="col-lg-6">
@@ -29,6 +29,7 @@
               </div>
             </div>
         </form>
+        @hasanyrole('admin|petugas')
         <div class=" my-2 border-bottom border-3 col-lg-3 mx-auto">Tanggapan</div>
         <form action="" method="post">
             <div class="mb-3">
@@ -42,12 +43,16 @@
                     <option value="Selesai">Selesai</option>
                 </select>
             </div>
+        @endhasanyrole
             <div class="border-top border-3 mt-2 pt-2 offcanvas-title">
+                @hasanyrole('admin|petugas')
                 <button type="submit" class="btn btn-primary float-end">Simpan</button>
+                @endhasanyrole
                 <button type="button" class="btn btn-danger float-end me-2" data-bs-dismiss="offcanvas">Close</button>
             </div>
         </form>
       </div>
+
     </div>
 </div>
   </div>
