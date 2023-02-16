@@ -1,7 +1,9 @@
 @extends('data.layout')
+@hasrole('masyarakat')
 @include('layout.navbar')
+@endhasrole
 @section('admin')
-@hasanyrole('admin,petugas')
+@hasanyrole('admin|petugas')
     <div id="app">
         @include('data.sidebar')
         <div id="main">
@@ -10,12 +12,11 @@
                     <i class="bi bi-justify fs-3"></i>
                 </a>
             </header>
+
+            <div class="page-heading">
+                <h3>Data Pengaduan</h3>
+            </div>
 @endhasanyrole
-
-
-<div class="page-heading">
-    <h3>Data Pengaduan</h3>
-</div>
 <div class="page-content">
     <section class="row" >
             <form action="" method="post" class="">
@@ -54,7 +55,7 @@
                                 <i class="bi bi-eye"></i>
                               </button>
                         </td>
-                        @hasanyrole('admin,petugas')
+                        @hasanyrole('admin|petugas')
                         <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="bi bi-trash3"></i></a></td>
                         @endhasanyrole
                       </tr>
@@ -70,7 +71,7 @@
                         <td class="col-1"> <button class="btn btn-primary col-9" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                             <i class="bi bi-eye"></i>
                           </button></td>
-                          @hasanyrole('admin,petugas')
+                          @hasanyrole('admin|petugas')
                           <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="bi bi-trash3"></i></a></td>
                           @endhasanyrole
                       </tr>
@@ -83,7 +84,7 @@
                         <td class="col-1"> <button class="btn btn-primary col-9" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                             <i class="bi bi-eye"></i>
                           </button></td>
-                        @hasanyrole('admin,petugas')
+                        @hasanyrole('admin|petugas')
                         <td class="col-1"><a href="" class="btn btn-danger col-9"><i class="bi bi-trash3"></i></a></td>
                         @endhasanyrole
                       </tr>
